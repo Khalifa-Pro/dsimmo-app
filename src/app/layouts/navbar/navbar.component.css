@@ -1,0 +1,72 @@
+/* Navbar */
+.navbar {
+    position: fixed; /* Fixé en haut */
+    top: 0;
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 120px;
+    height: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li div {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+[loc] {
+    scroll-margin-top: 2ex;
+}
+  
+
+.nav-links li div:hover {
+    color: #E2BF71;
+}
+
+/* Icône menu-toggle pour mobile */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive pour petit écran */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        display: none; /* Caché par défaut */
+        height: 150px;
+        padding-left: 200px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Afficher lorsqu'il est actif */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher l'icône de menu sur mobile */
+    }
+}

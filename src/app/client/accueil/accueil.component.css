@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Icône menu-toggle pour mobile */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive pour petit écran */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        display: none; /* Caché par défaut */
+        height: 150px;
+        padding-left: 200px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Afficher lorsqu'il est actif */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher l'icône de menu sur mobile */
+    }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    flex: 1;
+    border: none;
+    border-top: 3px solid black;
+    margin: 0 10px;
+}
+
+.header-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../../../assets/background.jpg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 450px;
+}
+
+/* Styles pour centrer la boîte de recherche */
+.search-box {
+    display: flex;
+    flex-direction: column; /* Disposition en colonne */
+    align-items: center;    /* Centrer horizontalement */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajuster la largeur si besoin */
+    margin: 0 auto; /* Centrer sur la page */
+}
+
+/* Container des inputs pour les aligner sur une ligne */
+.inputs-container {
+    display: flex;
+    gap: 10px; /* Espacement entre les deux champs */
+    margin-bottom: 10px; /* Espace avec le bouton Rechercher */
+}
+
+/* Ajuster la taille des selects pour qu'ils aient la même largeur */
+.search-box select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 140px; /* Ajuster selon les besoins */
+}
+
+/* Bouton de recherche en dessous des inputs */
+.search-box button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Property Types Section */
+.property-types {
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #E2BF71;
+}
+
+.property-types h2 {
+    margin-bottom: 30px;
+}
+
+.types-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.type-item {
+    text-align: center;
+}
+
+.type-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.biens-immo{
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+@media (max-width: 768px) {
+    .biens-immo div{
+        margin-top: 20px;
+    }
+}
+
+
+
+
