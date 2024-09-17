@@ -1,0 +1,41 @@
+<body style="background-color:#E2BF71;">
+    <app-navbar></app-navbar>
+    <div class="container" style="padding-top: 180px;">
+        <div class="row justify-content-center" style="margin-left: 100px;">
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <a [routerLink]="'/locations-agent'" style="text-decoration: none;">
+                    <div class="card location-card">
+                        <div class="card-body text-center">
+                            <svg style="color: #E2BF71;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
+                                <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207 1.354 8.853a.5.5 0 1 1-.708-.707z"/>
+                                <path d="m14 9.293-6-6-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.691 0-5.018"/>
+                            </svg>
+                            <br>
+                            <h5 class="card-title">Demande de location</h5>
+                            <p class="card-text">(37)</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="col-12 col-sm-6 col-md-4 mb-3">
+                <a [routerLink]="'/demandes-location-agent'" style="text-decoration: none;">
+                    <div class="card location-card">
+                        <div class="card-body text-center">
+                            <svg style="color: #E2BF71;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
+                                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+                            </svg>
+                            <br>
+                            <h5 class="card-title">Locations</h5>
+                            <p class="card-text">(437)</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <app-sidebar></app-sidebar>
+</body>
+

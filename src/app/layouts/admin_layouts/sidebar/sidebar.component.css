@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Styles de la sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    height: 100vh;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    transition: left 0.3s ease;
+}
+
+/* Logo */
+.logo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+/* Menu */
+.menu {
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #E2BF71;
+    border-radius: 4px;
+}
+
+/* Copyright en bas */
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+/* Icône du menu burger */
+.burger-menu {
+    margin-top: 30px;
+    display: none;
+    font-size: 30px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Pour les tablettes et téléphones */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}

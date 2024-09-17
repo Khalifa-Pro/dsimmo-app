@@ -1,0 +1,55 @@
+<body style="background-color:#E2BF71;">
+    <app-navbar></app-navbar>
+    <div class="container" style="padding-top: 80px;">
+       <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" style="margin-left: 20px">
+                <div class="container form-container">
+                    <h3>Creation de Compte Utilisateur</h3>
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nom" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Prenom" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Adresse" required>
+                            </div>
+                            <div class="col">
+                                <input type="tel" class="form-control" placeholder="Telephone" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nom d'utilisateur" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="password" class="form-control" placeholder="Mot de passe" required>
+                            </div>
+                            <div class="col">
+                                <select class="form-select" required>
+                                    <option value="">Profil</option>
+                                    <option value="ADMIN">Admin</option>
+                                    <option value="AGENT">Agent</option>
+                                    <option value="PROPRIETAIRE">Proprietaire</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-create">Creer</button>
+                    </form>
+            </div>
+            </div>
+       </div>
+    </div>
+    <app-sidebar></app-sidebar>
+</body>
+

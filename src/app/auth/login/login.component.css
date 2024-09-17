@@ -1,0 +1,29 @@
+body{
+    height: 100%;
+    margin: 0;
+    background-image: url('../../../assets/app2.jpeg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    background-color: rgba(255, 204, 128, 0.9); /* Transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    height: 500px;
+    text-align: center;
+    margin-top: 80px;
+}
+.login-container img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+.btn-connect {
+    width: 100%;
+    background-color: black;
+    color: white;
+}

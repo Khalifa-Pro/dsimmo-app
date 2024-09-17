@@ -39,27 +39,8 @@
     </button>
   </div>
 
-  <!-- FontAwesome Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <!-- Google Maps API -->
-  <script>
-    function initMap() {
-      var location = {lat: 48.8566, lng: 2.3522}; // Coordonnées pour Paris, vous pouvez ajuster cela
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: location
-      });
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map
-      });
-    }
-  </script>
-
-  <!-- Google Maps JavaScript API -->
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=dsimmo-435916&callback=initMap">
   </script>
 
 </body>
