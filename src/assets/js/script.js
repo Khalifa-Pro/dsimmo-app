@@ -17,18 +17,3 @@ function toggleSidebar() {
     }
 }
 
-function initMap() {
-    // Crée la carte, centrée sur une position spécifique (par exemple, Paris)
-    var location = { lat: 48.8566, lng: 2.3522 }; // Coordonnées pour Paris
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12, // Niveau de zoom
-        center: location
-    });
-
-    // Ajouter un marqueur à cette position
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-}
-
