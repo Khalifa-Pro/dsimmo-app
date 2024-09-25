@@ -49,7 +49,7 @@ export class ContratComponent implements OnInit {
   showSuccess()
   {
     this.toastr.success(
-      "Le contrat a été créé et envoyé avec succès!", "Succès", {
+      "Le contrat a été créé et envoyé avec succès", "Succès", {
           positionClass : "toast-top-right",
     });
   }
