@@ -1,9 +1,9 @@
-<body style="background-color:#E2BF71;">
-    <app-navbar></app-navbar>
+<div class="body" style="background-color:#E2BF71; padding-bottom: 255px;">
+    <app-navbaragent></app-navbaragent>
     <div class="container" style="padding-top: 180px;">
         <div class="row justify-content-center" style="margin-left: 100px;">
             <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <a [routerLink]="'/locations-agent'" style="text-decoration: none;">
+                <a [routerLink]="'/demandes-location-agent'" style="text-decoration: none;">
                     <div class="card location-card">
                         <div class="card-body text-center">
                             <svg style="color: #E2BF71;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-house-heart-fill" viewBox="0 0 16 16">
@@ -12,14 +12,14 @@
                             </svg>
                             <br>
                             <h5 class="card-title">Demande de location</h5>
-                            <p class="card-text">(37)</p>
+                            <p class="card-text"><strong>({{demandeStats.nombre_en_attente}})</strong></p>
                         </div>
                     </div>
                 </a>
             </div>
         
             <div class="col-12 col-sm-6 col-md-4 mb-3">
-                <a [routerLink]="'/demandes-location-agent'" style="text-decoration: none;">
+                <a [routerLink]="'/locations-agent'" style="text-decoration: none;">
                     <div class="card location-card">
                         <div class="card-body text-center">
                             <svg style="color: #E2BF71;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
@@ -28,7 +28,7 @@
                             </svg>
                             <br>
                             <h5 class="card-title">Locations</h5>
-                            <p class="card-text">(437)</p>
+                            <p class="card-text"><strong>({{demandeStats.nombre_acceptees}})</strong></p>
                         </div>
                     </div>
                 </a>
@@ -36,6 +36,6 @@
         </div>
         
     </div>
-    <app-sidebar></app-sidebar>
-</body>
+    <app-sidebaragent></app-sidebaragent>
+</div>
 

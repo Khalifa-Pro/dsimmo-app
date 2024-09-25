@@ -1,0 +1,16 @@
+/* Limiter la largeur des colonnes pour éviter les débordements */
+.table th, .table td {
+    white-space: nowrap; /* Empêche le texte de se diviser en plusieurs lignes */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte dépasse */
+    max-width: 150px; /* Ajuster la taille en fonction du contenu */
+}
+
+/* Ajuster la largeur spécifique de certaines colonnes */
+.prenom-col {
+    max-width: 120px;
+}
+
+.numero-appartement-col {
+    max-width: 100px;
+}

@@ -1,55 +1,53 @@
-<body style="background-color:#E2BF71;">
-    <app-navbar></app-navbar>
+<div style="background-color:#E2BF71; padding-bottom: 110px;">
+    <app-navbaradmin></app-navbaradmin>
     <div class="container" style="padding-top: 80px;">
-       <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8" style="margin-left: 20px">
+       <div class="row justify-content-center">
+            <div class="col-md-8">
                 <div class="container form-container">
-                    <h3>Creation de Compte Utilisateur</h3>
-                    <form>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Nom" required>
+                        <h3>Création de Compte Utilisateur</h3>
+                        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <input type="text" formControlName="nom" class="form-control" placeholder="Nom" required aria-label="Nom">
+                                </div>
+                                <div class="col">
+                                    <input type="text" formControlName="prenom" class="form-control" placeholder="Prénom" required aria-label="Prénom">
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Prenom" required>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <input type="text" formControlName="adresse" class="form-control" placeholder="Adresse" required aria-label="Adresse">
+                                </div>
+                                <div class="col">
+                                    <input type="tel" formControlName="telephone" class="form-control" placeholder="Téléphone" required aria-label="Téléphone">
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Adresse" required>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <input type="email" formControlName="email" class="form-control" placeholder="Email" required aria-label="Email">
+                                </div>
+                                <div class="col">
+                                    <input type="text" formControlName="username" class="form-control" placeholder="Nom d'utilisateur" required aria-label="Nom d'utilisateur">
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="tel" class="form-control" placeholder="Telephone" required>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <input type="password" formControlName="password" class="form-control" placeholder="Mot de passe" required aria-label="Mot de passe">
+                                </div>
+                                <div class="col">
+                                    <select formControlName="profil" class="form-select" required aria-label="Profil">
+                                        <option value="">Profil</option>
+                                        <option value="ADMINISTRATEUR">ADMINISTRATEUR</option>
+                                        <option value="AGENT">AGENT</option>
+                                        <option value="PROPRIETAIRE">PROPRIETAIRE</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <input type="email" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Nom d'utilisateur" required>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col">
-                                <input type="password" class="form-control" placeholder="Mot de passe" required>
-                            </div>
-                            <div class="col">
-                                <select class="form-select" required>
-                                    <option value="">Profil</option>
-                                    <option value="ADMIN">Admin</option>
-                                    <option value="AGENT">Agent</option>
-                                    <option value="PROPRIETAIRE">Proprietaire</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-create">Creer</button>
-                    </form>
-            </div>
+                            <button type="submit" class="btn btn-dark">Créer</button>
+                        </form>
+                </div>
             </div>
        </div>
     </div>
-    <app-sidebar></app-sidebar>
-</body>
-
+    <app-sidebaradmin></app-sidebaradmin>
+</div>

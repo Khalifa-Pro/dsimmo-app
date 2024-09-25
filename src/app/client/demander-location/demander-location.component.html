@@ -1,0 +1,41 @@
+<div class="container form-container">
+    <h3><strong>Formulaire de demande de location</strong></h3>
+    <form [formGroup]="demandeForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <input formControlName="nom" type="text" class="form-control" placeholder="Nom" required>
+            <div *ngIf="demandeForm.controls.nom?.invalid && demandeForm.controls.nom?.touched" class="error-message">
+                Le nom est requis.
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <input formControlName="prenom" type="text" class="form-control" placeholder="Prénom" required>
+            <div *ngIf="demandeForm.controls.prenom?.invalid && demandeForm.controls.prenom?.touched" class="error-message">
+                Le prénom est requis.
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <input formControlName="adresse" type="text" class="form-control" placeholder="Adresse" required>
+            <div *ngIf="demandeForm.controls.adresse?.invalid && demandeForm.controls.adresse?.touched" class="error-message">
+                Le adresse est requis.
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <input formControlName="telephone" type="text" class="form-control" placeholder="Téléphone" required>
+            <div *ngIf="demandeForm.controls.telephone?.invalid && demandeForm.controls.telephone?.touched" class="error-message">
+                Le telephone est requis.
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <input formControlName="email" type="text" class="form-control" placeholder="Email" required>
+            <div *ngIf="demandeForm.controls.email?.invalid && demandeForm.controls.email?.touched" class="error-message">
+                Le telephone est requis.
+            </div>
+        </div>
+        <br>
+        <button style="width: 100%;" type="submit" class="btn btn-dark" [disabled]="demandeForm.invalid">Passer la demande</button>
+    </form>
+</div>

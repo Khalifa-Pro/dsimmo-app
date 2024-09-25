@@ -1,0 +1,39 @@
+/* Container principal centré avec ombre */
+.form-container {
+    background-color: #d3d3d3; /* Fond gris similaire à l'image */
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto; /* Centrer horizontalement */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre autour du formulaire */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  /* Titre du formulaire */
+  .form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Champ input */
+  .form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  /* Bouton submit */
+  .btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Ombre derrière la carte */
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  

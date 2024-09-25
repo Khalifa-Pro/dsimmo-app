@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: Arial, sans-serif;
 }
 
@@ -154,6 +154,13 @@ a {
         margin-top: 20px;
     }
 }
+
+.biens-immo img{
+    width: 290px;
+    height: 220px;
+}
+
+
 
 
 

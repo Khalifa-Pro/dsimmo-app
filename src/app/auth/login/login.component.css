@@ -1,4 +1,4 @@
-body{
+.body{
     height: 100%;
     margin: 0;
     background-image: url('../../../assets/backLog.jpg'); /* Replace with your image URL */
@@ -8,6 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
 }
 .login-container {
     background-color: rgba(255, 204, 128, 0.9); /* Transparent background */

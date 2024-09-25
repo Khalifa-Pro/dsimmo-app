@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   underLocation(){
-    window.scrollTo(100,100);
+    window.scrollTo(0,800);
   }
 
   underVente(){

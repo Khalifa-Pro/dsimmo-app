@@ -1,100 +1,112 @@
-<body style="background-color:#E2BF71;">
-    <app-navbar></app-navbar>
-    <div class="container" style="padding-top: 80px;">
+<div style="background-color:#E2BF71; padding-bottom: 200px;">
+    <app-navbarprop></app-navbarprop>
+    <div class="container" style="padding-top: 120px;">
        <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-8" style="margin-left: 20px">
                 <div class="card">
                     <div class="card-header" style="text-align: center;">
-                        <strong style="text-align: center;">Formulaire d'ajout Appartement</strong>
+                        <strong>Formulaire d'ajout Appartement</strong>
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Prix</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Ajouter une image</label>
-                                    <input type="file" class="form-control-file" id="exampleInputFile">
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Adresse</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Ajouter une video</label>
-                                    <input type="file" class="form-control-file" id="exampleInputFile">
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Superficie</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <div class="col">
-                                        <select class="form-select" required>
-                                            <option value="">Status</option>
-                                            <option value="appartement">Appartement</option>
-                                            <option value="maison">Maison</option>
-                                            <option value="terrain">Terrain</option>
-                                        </select>
+                        <form [formGroup]="appartementForm" (ngSubmit)="creerAppartement()">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" formControlName="prix" placeholder="Prix">
+                                        <label for="floatingInput">Prix</label>
                                     </div>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <select class="form-select" required>
-                                        <option value="">Niveau</option>
-                                        <option value="rdc">RDC</option>
-                                        <option value="etage1">Etage 1</option>
-                                        <option value="atage2">Etage 2</option>
-                                        <option value="atage3">Etage 3</option>
-                                        <option value="atage4">Etage 4</option>
-                                    </select>
-                                </div>                                
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Nombrede pieces</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="imageFile">Ajouter une image</label>
+                                        <input type="file" class="form-control-file" (change)="onFileChange($event, 'image')">
+                                    </div>                                
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">N°APP</label>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" formControlName="adresse" placeholder="Adresse">
+                                        <label for="floatingInput">Adresse</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="videoFile">Ajouter une vidéo</label>
+                                        <input type="file" class="form-control-file" (change)="onFileChange($event, 'videos')">
+                                    </div>                                
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="descriptionBienImmobilier" rows="4" placeholder="Description"></textarea>
-                                </div>                           
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" formControlName="superficie" placeholder="Superficie">
+                                        <label for="floatingInput">Superficie (m²)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select class="form-select" formControlName="status" required>
+                                            <option value="">Sélectionner le statut</option>
+                                            <option value="location">Location</option>
+                                            <option value="vente">Vente</option>
+                                        </select>
+                                    </div>                                
+                                </div>
                             </div>
-                        </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <select class="form-select" formControlName="niveau" required>
+                                            <option value="">Sélectionner le niveau</option>
+                                            <option value="0">RDC</option>
+                                            <option value="1">Étage 1</option>
+                                            <option value="2">Étage 2</option>
+                                            <option value="3">Étage 3</option>
+                                            <option value="4">Étage 4</option>
+                                        </select>
+                                    </div>                                
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" formControlName="nombre_de_pieces" placeholder="Nombre de pièces">
+                                        <label for="floatingInput">Nombre de pièces</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" formControlName="numero_appartement" placeholder="N° Appartement">
+                                        <label for="floatingInput">Numéro Appartement</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" formControlName="description" rows="4" placeholder="Description"></textarea>
+                                    </div>                            
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-dark">
+                                        Ajouter
+                                    </button>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
        </div>
     </div>
-    <app-sidebar></app-sidebar>
-</body>
-
+    <app-sidebarprop></app-sidebarprop>
+</div>

@@ -1,19 +1,25 @@
-<body>
+<div class="body">
     <div class="login-container">
-        <img src="../../../assets/logo_dsimmo.png" alt="DSIMMO Logo"> <!-- Replace with the actual logo path -->
+        <img src="../../../assets/logo_dsimmo.png" alt="DSIMMO Logo"> <!-- Assurez-vous que le chemin vers l'image est correct -->
         <br>
         <h3>Connexion</h3>
         <br>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Nom d'utilisateur" required>
+                <input formControlName="username" type="text" class="form-control" placeholder="Nom d'utilisateur" required>
+                <div *ngIf="loginForm.controls.username?.invalid && loginForm.controls.username?.touched" class="error-message">
+                    Le nom d'utilisateur est requis et doit être un email valide.
+                </div>
             </div>
             <br>
             <div class="mb-3">
-                <input type="password" class="form-control" placeholder="Mot de passe" required>
+                <input formControlName="password" type="password" class="form-control" placeholder="Mot de passe" required>
+                <div *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.touched" class="error-message">
+                    Le mot de passe est requis.
+                </div>
             </div>
             <br>
-            <button type="submit" class="btn btn-connect">Connecter</button>
+            <button type="submit" class="btn btn-connect" [disabled]="loginForm.invalid">Connecter</button>
         </form>
     </div>
-</body>
+</div>

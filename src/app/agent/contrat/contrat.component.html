@@ -1,0 +1,55 @@
+<div class="container form-container">
+    <h3><strong>Formulaire de création de contrat</strong></h3>
+    <form [formGroup]="contratForm" (ngSubmit)="onSubmit()">
+        <!-- Champ pour le numéro du contrat -->
+        <div class="mb-3">
+            <input formControlName="numero_contrat" type="text" class="form-control" placeholder="Numéro du contrat" required>
+            <div *ngIf="contratForm.controls['numero_contrat']?.invalid && contratForm.controls['numero_contrat']?.touched" class="error-message">
+                Le numéro de contrat est requis.
+            </div>
+        </div>
+        <br>
+
+        <!-- Champ pour la date de début -->
+        <div class="mb-3">
+            <input formControlName="date_debut" type="date" class="form-control" placeholder="Date de début" required>
+            <div *ngIf="contratForm.controls['date_debut']?.invalid && contratForm.controls['date_debut']?.touched" class="error-message">
+                La date de début est requise.
+            </div>
+        </div>
+        <br>
+
+        <!-- Champ pour la date de fin -->
+        <div class="mb-3">
+            <input formControlName="date_fin" type="date" class="form-control" placeholder="Date de fin" required>
+            <div *ngIf="contratForm.controls['date_fin']?.invalid && contratForm.controls['date_fin']?.touched" class="error-message">
+                La date de fin est requise.
+            </div>
+        </div>
+        <br>
+
+        <!-- Champ pour le type de contrat -->
+        <div class="mb-3">
+            <select formControlName="type" class="form-control" required>
+                <option value="">Sélectionnez le type de contrat</option>
+                <option value="Location">Location</option>
+                <option value="Vente">Vente</option>
+            </select>
+            <div *ngIf="contratForm.controls['type']?.invalid && contratForm.controls['type']?.touched" class="error-message">
+                Le type de contrat est requis.
+            </div>
+        </div>
+        <br>
+
+        <!-- Champ pour le montant -->
+        <div class="mb-3">
+            <input formControlName="montant" type="number" class="form-control" placeholder="Montant" required>
+            <div *ngIf="contratForm.controls['montant']?.invalid && contratForm.controls['montant']?.touched" class="error-message">
+                Le montant est requis.
+            </div>
+        </div>
+        <br>
+
+        <button type="submit" class="btn btn-dark" [disabled]="contratForm.invalid">Créer le contrat</button>
+    </form>
+</div>
