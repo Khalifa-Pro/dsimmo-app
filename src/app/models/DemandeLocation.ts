@@ -1,7 +1,7 @@
 export interface DemandeLocation {
     nom: string;
     prenom: string;
-    adresse: string;
+    lieu: string;
     telephone: string;
     email: string;
     numero_appartement: string;

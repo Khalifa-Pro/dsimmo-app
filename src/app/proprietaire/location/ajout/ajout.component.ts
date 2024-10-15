@@ -62,7 +62,7 @@ export class AjoutComponent {
       .subscribe(
         (response) => {
           console.log('Appartement créé avec succès', response);
-          this.router.navigateByUrl('/liste-location');
+          this.router.navigateByUrl('/mes-biens');
         },
         (error) => {
           console.error('Erreur lors de la création de l\'appartement', error);

@@ -75,11 +75,11 @@
         </div>
     </section>
     <section class="biens-immo">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-left: 65px;">
             <div *ngFor="let app of apps" style="flex: 0 0 30%; margin-bottom: 20px;">
                 <a routerLink="/details-bien-immo/{{app.id}}">
                     <div style="width: 290px; 
-                    height: 455px;
+                    height: 550px;
                     background-color: #E2BF71; 
                     border-radius: 25px;
                     box-shadow: 2px 2px 5px gray;
@@ -88,7 +88,7 @@
                     ">
                     <img src="http://127.0.0.1:8000/assets/images/appartements/{{app.image}}" alt="" style="border-radius: 25px; padding: 30px;">
                     <div style="width: 265px; 
-                            height: 210px;
+                            height: 270px;
                             background-color: #ffffff;
                             border-radius: 25px;
                             margin: 11px;
